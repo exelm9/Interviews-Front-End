@@ -1,14 +1,31 @@
-import React from 'react';
+import React, { Component } from 'react';
+import FilterButton from "./FilterButton"
+import _ from 'lodash';
 
-const SearchFilter = (props) => {
-	const {filterClick} = props;
-  return (
-    <div className="searchFilter" onClick={filterClick}>
-    	{/* refactor to components */}
-    	<button value="boarding">Boarding</button>
-    	<button value="sitting">Sitting</button>
-    </div>
-  );
+class SearchFilter extends Component {
+	constructor(props){
+		super(props);
+		this.state = {
+			activeFilter: null,
+			filters:["boarding","sitting"]
+		};
+	}
+	render(){
+		let filterBtns = _.map(this.state.filters, (filter, index) => {
+			return (
+				<FilterButton
+					name={ filter }
+					key={ "filterBtn" + index }
+				/>
+			);
+		});
+
+	  return (
+	    <div className="searchFilter" onClick={this.props.filterClick}>
+	    	{ filterBtns }
+	    </div>
+	  );
+	}
 };
 
 export default SearchFilter

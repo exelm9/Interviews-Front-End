@@ -5,7 +5,6 @@ import * as serverAPI from "../lib/server-api.js";
 import {formatFullName, truncateDescription} from "../lib/utility.js";
 import _ from 'lodash';
 
-
 export default class Search extends Component {
   constructor(props) {
   	super(props);
