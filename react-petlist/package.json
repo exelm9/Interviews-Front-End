@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "axios": "^0.13.1",
+    "css-loader": "^0.23.1",
     "flux": "*",
     "lodash": "^4.14.0",
     "react": "^0.14.2",
@@ -29,6 +30,7 @@
     "react-router": "2.0.0",
     "react-router-bootstrap": "^0.20.1",
     "react-router-redux": "^3.0.0",
+    "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "yargs": "^3.32.0"
   },
