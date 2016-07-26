@@ -21,9 +21,18 @@ export default class Search extends Component {
   }
 
   render() {
+    let searchItems = _.map(this.state.results, (result) => {
+
+      return (
+        <SearchItem
+        />
+      );
+    });
+
     return (
       <div>
-      test
+        <SearchFilter/>
+        { searchItems }
       </div>
     );
   }
