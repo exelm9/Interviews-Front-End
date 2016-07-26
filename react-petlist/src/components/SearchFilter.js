@@ -9,6 +9,7 @@ class SearchFilter extends Component {
 			filters:["boarding","sitting"]
 		};
 	}
+	
 	render(){
 		let filterBtns = _.map(this.state.filters, (filter, index) => {
 		let active = this.props.activeFilter === filter ? "active" : "";
@@ -22,10 +23,10 @@ class SearchFilter extends Component {
 		});
 
 	  return (
-	    <div className="searchFilter" onClick={this.props.filterClick}>
+	  	<div className="searchFilter" onClick={this.props.filterClick}>
 	    	{ filterBtns }
-	    </div>
-	  );
+	  	</div>
+		);
 	}
 };
 
