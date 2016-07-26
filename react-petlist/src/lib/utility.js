@@ -1,17 +1,17 @@
 import _ from 'lodash';
 
 export const formatFullName = (user) => {
-	let firstName = capitalizeFirstLetter(user.first); 
-	let lastName = formatLastName(user.last);
-	return `${firstName} ${lastName}`;
+  let firstName = capitalizeFirstLetter(user.first); 
+  let lastName = formatLastName(user.last);
+  return `${firstName} ${lastName}`;
 }
 
 export const truncateDescription = (description) => {
-	let trimStr = description.substring(0, 48);
-	while(trimStr.charAt(trimStr.length - 1) === " "){
-		trimStr = trimStr.slice(0,-1);
-	}
-	return `${trimStr}...`;
+  let trimStr = description.substring(0, 48);
+  while(trimStr.charAt(trimStr.length - 1) === " "){
+    trimStr = trimStr.slice(0,-1);
+  }
+  return `${trimStr}...`;
 }
 
 /* helper funcs */
@@ -20,5 +20,5 @@ const capitalizeFirstLetter = (string) =>{
 }
 
 const formatLastName = (lastName) => {
-	return `${lastName[0].toUpperCase()}.`;
+  return `${lastName[0].toUpperCase()}.`;
 }

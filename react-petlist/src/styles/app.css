@@ -1,9 +1,9 @@
 body {
-	background: #f6f6f1;
+  background: #f6f6f1;
 }
 
 .userCard {
-	margin-bottom: 15px;
+  margin-bottom: 15px;
   padding: .9375rem;
   background-color: #fff;
   border: 1px solid #dfe4e5;
@@ -11,10 +11,10 @@ body {
 }
 
 .searchFilter {
-	background: #fff;
+  background: #fff;
   border-bottom: 1px solid #dfe4e5;
-	box-sizing: border-box;
-	font-family: Intro,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  box-sizing: border-box;
+  font-family: Intro,"Helvetica Neue",Helvetica,Arial,sans-serif;
   min-width: 1000px;
   position: relative;
   z-index: 1000;

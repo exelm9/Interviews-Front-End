@@ -2,16 +2,16 @@
 import React, { Component, PropTypes } from 'react';
 
 export default class App extends Component {
-	render() {
-	const { children } = this.props;
-		return (
-   		<div className="stage">
-    	{this.props.children}
-    	</div>
-  	)
-	}
+  render() {
+  const { children } = this.props;
+    return (
+        <div className="stage">
+          {this.props.children}
+        </div>
+    );
+  }
 }
 
 App.propTypes = {
-	children: PropTypes.object.isRequired
+  children: PropTypes.object.isRequired
 };

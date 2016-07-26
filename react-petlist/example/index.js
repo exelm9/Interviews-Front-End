@@ -7,7 +7,7 @@ import styles from '../src/styles/app.css';
 const dest = document.getElementById('content');
 
 ReactDOM.render(
-	<Router history={ browserHistory } routes={ routes } />,
+  <Router history={ browserHistory } routes={ routes } />,
   dest
 );
 
