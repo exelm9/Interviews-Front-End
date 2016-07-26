@@ -1,14 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Test from 'components/Test';
+import {Router, browserHistory} from 'react-router';
+import routes from '../routes.js';
 
 const dest = document.getElementById('content');
 
 ReactDOM.render(
-  <div>
-    <Test value={2} default="messages" one="message" /><br/>
-    <Test value={1} default="messages" one="message" />
-  </div>,
+	<Router history={ browserHistory } routes={ routes } />,
   dest
 );
 
