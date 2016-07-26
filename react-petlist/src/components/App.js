@@ -1,13 +1,15 @@
 // This component handles the App template used on every page.
 import React, { Component } from 'react';
 
-export default class App extends Component {
+class App extends Component {
   render() {
+  	const { children } = this.props
     return (
    		<div className="stage">
-   			test
+      	{this.props.children}
       </div>
     )
   }
 }
 
+export default App;
