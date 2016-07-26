@@ -7,12 +7,11 @@ export const formatFullName = (user) => {
 }
 
 export const truncateDescription = (description) => {
-	console.log(description,'what')
 	let trimStr = description.substring(0, 48);
-	while(trimStr.charAt(trimStr.length) === " "){
-		trimStr.splice(0,-1);
+	while(trimStr.charAt(trimStr.length - 1) === " "){
+		trimStr = trimStr.slice(0,-1);
 	}
-	return trimStr;
+	return `${trimStr}...`;
 }
 
 /* helper funcs */
@@ -21,5 +20,5 @@ const capitalizeFirstLetter = (string) =>{
 }
 
 const formatLastName = (lastName) => {
-	return lastName[0].toUpperCase() + ".";
+	return `${lastName[0].toUpperCase()}.`;
 }

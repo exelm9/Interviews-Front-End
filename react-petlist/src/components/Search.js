@@ -24,13 +24,13 @@ export default class Search extends Component {
   render() {
     let searchItems = _.map(this.state.results, (result, index) => {
     let fullName = formatFullName(result.user);
-    console.log(result,'wtf')
+    let description = truncateDescription(result.description);
 
       return (
         <SearchItem
           fullName={ fullName }
           title={ result.title }
-          description={ result.description }
+          description={ description }
           petName={ result.pet.name }
           key={ "searchItem" + index }
         />
