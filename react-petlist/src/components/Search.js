@@ -23,7 +23,17 @@ export default class Search extends Component {
   }
 
   filterClick(event) {
-    
+    if(event.target.value === "boarding"){
+      serverAPI.searchBoarding(null, (response) => {
+        let data = response.data.search;
+        this.setState({ results: data });
+      })
+    }else if(event.target.value === "sitting"){
+      serverAPI.searchSitting(null, (response) => {
+        let data = response.data.search;
+        this.setState({ results: data });
+      })
+    }
   }
 
   render() {
