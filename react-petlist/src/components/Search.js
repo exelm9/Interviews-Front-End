@@ -10,12 +10,16 @@ export default class Search extends Component {
   }
 
   componentDidMount() {
+    serverAPI.search(null, (response) => {
+      let data = response.data.search;
+      this.setState({ results: data });
+    })
   }
 
   render() {
     return (
       <div>
-
+      test
       </div>
     );
   }
