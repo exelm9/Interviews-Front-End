@@ -1,9 +1,9 @@
 // This component handles the App template used on every page.
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
-class App extends Component {
+export default class App extends Component {
   render() {
-  	const { children } = this.props
+  	const { children } = this.props;
     return (
    		<div className="stage">
       	{this.props.children}
@@ -12,4 +12,6 @@ class App extends Component {
   }
 }
 
-export default App;
+App.propTypes = {
+  children: PropTypes.object.isRequired
+};
