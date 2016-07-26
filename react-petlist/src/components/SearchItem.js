@@ -1,7 +1,7 @@
 import React from 'react';
 
 const SearchItem = (props) => {
-	const {title, fullName, description, petName} = props;
+  const {title, fullName, description, petName} = props;
 	
   return (
     <div className="userCard">
