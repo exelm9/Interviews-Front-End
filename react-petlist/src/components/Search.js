@@ -12,6 +12,7 @@ export default class Search extends Component {
   	this.state = {
   	 results: []
   	};
+    this.filterClick = this.filterClick.bind(this);
   }
 
   componentDidMount() {
@@ -19,6 +20,10 @@ export default class Search extends Component {
       let data = response.data.search;
       this.setState({ results: data });
     })
+  }
+
+  filterClick(event) {
+    
   }
 
   render() {
@@ -39,7 +44,7 @@ export default class Search extends Component {
 
     return (
       <div>
-        <SearchFilter/>
+        <SearchFilter filterClick={this.filterClick}/>
         { searchItems }
       </div>
     );
