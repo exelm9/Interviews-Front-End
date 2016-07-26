@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import * as serverAPI from "../lib/server-api.js";
+import SearchFilter from "./SearchFilter";
+import SearchItem from "./SearchItem";
+import _ from 'lodash';
+
 
 export default class Search extends Component {
   constructor(props) {
