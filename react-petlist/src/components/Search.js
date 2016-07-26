@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import * as serverAPI from "../lib/server-api.js";
 
 export default class Search extends Component {
   constructor(props) {
@@ -14,7 +15,7 @@ export default class Search extends Component {
   render() {
     return (
       <div>
-        test
+
       </div>
     );
   }
