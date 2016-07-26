@@ -19,6 +19,7 @@
   "dependencies": {
     "axios": "^0.13.1",
     "flux": "*",
+    "lodash": "^4.14.0",
     "react": "^0.14.2",
     "react-ajax": "^0.1.1",
     "react-dom": "^0.14.1",
