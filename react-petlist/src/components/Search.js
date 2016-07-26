@@ -22,11 +22,16 @@ export default class Search extends Component {
   }
 
   render() {
-    let searchItems = _.map(this.state.results, (result) => {
+    let searchItems = _.map(this.state.results, (result, index) => {
     let fullName = formatFullName(result.user);
-    console.log(fullName)
+
       return (
         <SearchItem
+          fullName={ fullName }
+          title={ result.title }
+          description={ result.description }
+          petName={ result.pet.name }
+          key={ "searchItem" + index }
         />
       );
     });

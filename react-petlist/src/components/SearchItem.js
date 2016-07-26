@@ -1,10 +1,14 @@
 import React from 'react';
 
-const SearchItem = () => {
-
+const SearchItem = (props) => {
+	const {title, fullName, description, petName} = props;
+	
   return (
     <div className="userCard">
-    	search item
+    	<div>{ fullName }</div>
+    	<div>{ title }</div>
+    	<div>{ petName }</div>
+    	<div>{ description }</div>
 		</div>
   );
 };
