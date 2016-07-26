@@ -9,7 +9,8 @@ export default class Search extends Component {
   constructor(props) {
   	super(props);
   	this.state = {
-  	 results: []
+  	 results: [],
+     activeFilter: null
   	};
     this.filterClick = this.filterClick.bind(this);
   }
@@ -25,12 +26,18 @@ export default class Search extends Component {
     if(event.target.value === "boarding"){
       serverAPI.searchBoarding(null, (response) => {
         let data = response.data.search;
-        this.setState({ results: data });
+        this.setState({ 
+          results: data,
+          activeFilter:"boarding" 
+        });
       })
     }else if(event.target.value === "sitting"){
       serverAPI.searchSitting(null, (response) => {
         let data = response.data.search;
-        this.setState({ results: data });
+        this.setState({ 
+          results: data, 
+          activeFilter:"sitting" 
+        });
       })
     }
   }
@@ -53,7 +60,7 @@ export default class Search extends Component {
 
     return (
       <div>
-        <SearchFilter filterClick={this.filterClick}/>
+        <SearchFilter activeFilter={this.state.activeFilter} filterClick={this.filterClick}/>
         { searchItems }
       </div>
     );

@@ -6,15 +6,16 @@ class SearchFilter extends Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			activeFilter: null,
 			filters:["boarding","sitting"]
 		};
 	}
 	render(){
 		let filterBtns = _.map(this.state.filters, (filter, index) => {
+		let active = this.props.activeFilter === filter ? "active" : "";
 			return (
 				<FilterButton
 					name={ filter }
+					active={ active }
 					key={ "filterBtn" + index }
 				/>
 			);

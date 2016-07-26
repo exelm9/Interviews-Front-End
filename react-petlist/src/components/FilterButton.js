@@ -1,9 +1,9 @@
 import React from 'react';
 
 const FilterButton = (props) => {
-	const { name } = props;
+	const { name, active } = props;
   return (
-  	<button value={ name }>{ name }</button>
+  	<button className={ active } value={ name }>{ name }</button>
   );
 };
 
